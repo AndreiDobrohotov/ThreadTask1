@@ -7,7 +7,7 @@ import java.util.concurrent.ExecutionException;
 
 public class Controller {
     private static final Model model = new Model();
-    private static final View view = new View();
+    private static final View view = new View(); //no sense to make them static and better set them via constructor
 
     public void execute() throws ExecutionException, InterruptedException {
         while(true){

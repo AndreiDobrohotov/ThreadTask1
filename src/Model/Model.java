@@ -6,7 +6,7 @@ import Model.Operations.*;
 import java.util.*;
 import java.util.concurrent.*;
 
-public class Model {
+public class Model {//name is not accurate
     //коллекция для всех мат. операций
     private final Set<CallableWithFuture> futureSet = new HashSet<>();
     private final ExecutorService executorService = Executors.newCachedThreadPool();
@@ -59,7 +59,7 @@ public class Model {
         return result;
     }
 
-    public enum MathOperations{
+    public enum MathOperations{ //enum can be extracted from class
         SUM,
         SUBTRACTION,
         MULTIPLICATION,
