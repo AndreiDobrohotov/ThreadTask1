@@ -1,4 +1,4 @@
-import Controller.Controller;
+import controller.Controller;
 
 import java.util.concurrent.ExecutionException;
 

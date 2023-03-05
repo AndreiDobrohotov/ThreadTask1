@@ -1,20 +1,19 @@
-package Model;
+package model;
 
-import Controller.Controller;
-import Model.Operations.*;
+import model.Operations.*;
 
 import java.util.*;
 import java.util.concurrent.*;
 
-public class Model {//name is not accurate
+public class Model {//name is not accurate ??
     //коллекция для всех мат. операций
     private final Set<CallableWithFuture> futureSet = new HashSet<>();
     private final ExecutorService executorService = Executors.newCachedThreadPool();
 
     //метод модели для добавление мат. операций в коллекцию
-    public boolean addMathOperation(String numbers, MathOperations operation){
+    public boolean addMathOperation(String numbers, TypeOfMathOperation operation){
         List<Integer> intNumbers = stringLineToIntegerList(numbers);
-        if(intNumbers.size()<2 && operation!=MathOperations.FACTORIAL) return false;
+        if(intNumbers.size()<2 && operation!= TypeOfMathOperation.FACTORIAL) return false;
         switch (operation){
             case SUM -> futureSet.add(new Sum(intNumbers));
             case MULTIPLICATION -> futureSet.add(new Multiplication(intNumbers));
@@ -57,13 +56,6 @@ public class Model {//name is not accurate
             catch (NumberFormatException ignore){}
         }
         return result;
-    }
-
-    public enum MathOperations{ //enum can be extracted from class
-        SUM,
-        SUBTRACTION,
-        MULTIPLICATION,
-        FACTORIAL
     }
 
 }

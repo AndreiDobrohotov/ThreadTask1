@@ -1,4 +1,4 @@
-package Model.Operations;
+package model.Operations;
 
 import java.util.concurrent.Callable;
 import java.util.concurrent.Future;

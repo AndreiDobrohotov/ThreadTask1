@@ -1,4 +1,4 @@
-package Model.Operations;
+package model.Operations;
 
 import java.util.List;
 
@@ -13,7 +13,7 @@ public class Subtraction extends CallableWithFuture {
 
 
     @Override
-    public Long call() throws Exception {
+    public Long call() {
         long result = numbers.get(0);
         if(numbers.size()>1){
             for(int i=1;i<numbers.size();i++){

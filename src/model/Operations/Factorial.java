@@ -1,4 +1,4 @@
-package Model.Operations;
+package model.Operations;
 
 
 public class Factorial extends CallableWithFuture {
@@ -10,7 +10,7 @@ public class Factorial extends CallableWithFuture {
     }
 
     @Override
-    public Long call() throws Exception {
+    public Long call()  {
         return number==0 ? 1 : factorial(number);
     }
 
